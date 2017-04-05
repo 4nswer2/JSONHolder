@@ -1,0 +1,13 @@
+<manifest package="jp.gr.java_conf.atle42.library.jsonholder"
+
+          xmlns:android="http://schemas.android.com/apk/res/android"
+>
+
+    <application android:allowBackup="true"
+                 android:label="@string/app_name"
+                 android:supportsRtl="true"
+    >
+
+    </application>
+
+</manifest>

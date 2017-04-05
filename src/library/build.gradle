@@ -1,5 +1,17 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
+apply plugin: 'maven'
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository url: "file://${projectDir}/../../docs/repository"
+            pom.groupId = 'jp.gr.java_conf.atle42.library'
+            pom.artifactId = 'json-holder'
+            pom.version = '0.0.1'
+        }
+    }
+}
 
 android {
     compileSdkVersion 25

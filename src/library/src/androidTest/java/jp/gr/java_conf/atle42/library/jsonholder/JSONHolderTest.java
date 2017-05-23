@@ -7,9 +7,6 @@ import org.junit.runner.RunWith;
 
 import static org.junit.Assert.assertEquals;
 
-/**
- * Created by murata_to on 2017/04/05.
- */
 
 @RunWith(AndroidJUnit4.class)
 public class JSONHolderTest {

@@ -5,9 +5,7 @@ import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.junit.runner.RunWith
 
-/**
- * Created by murata_to on 2017/04/05.
- */
+
 @RunWith(AndroidJUnit4::class)
 class JSONHolderTestKt {
 

@@ -4,9 +4,7 @@ import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
 
-/**
- * Created by murata_to on 2017/04/05.
- */
+
 class JSONHolder private constructor(private val current: Any?) {
 
 	//--------------------------------------------------
@@ -26,7 +24,7 @@ class JSONHolder private constructor(private val current: Any?) {
 			try {
 				any = JSONObject(rawJson)
 			} catch (e: JSONException) {
-				any = JSONArray(rawJson)
+				any = try { JSONArray(rawJson) } catch (e: JSONException) { JSONObject() }
 			}
 			return JSONHolder(any)
 		}

@@ -28,6 +28,14 @@ class JSONHolderTestKt {
 		assertEquals(34.6786737, holder["json"]["double-array"].asList()[0].asDouble(), 0.0)
 	}
 
+	@Test
+	@Throws(Exception::class)
+	fun testHas() {
+		val holder = JSONHolder.parse(testRawJson)
+		assertEquals(true, holder.has("json"))
+		assertEquals(false, holder.has("jso"))
+	}
+
 	//--------------------------------------------------
 	//  test rawJson
 	//--------------------------------------------------

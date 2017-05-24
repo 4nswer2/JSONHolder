@@ -52,7 +52,7 @@ class JSONHolder private constructor(private val current: Any?) {
 	}
 
 	fun has(vararg path: Any): Boolean {
-		return get(path).current != null
+		return get(*path).current != null
 	}
 
 	@JvmOverloads fun asList   (v: List<JSONHolder> = listOf()): List<JSONHolder> { return (current as? JSONArray)?.toList() ?: v }

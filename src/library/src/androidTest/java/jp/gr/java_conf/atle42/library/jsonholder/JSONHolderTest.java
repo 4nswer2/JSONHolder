@@ -28,6 +28,13 @@ public class JSONHolderTest {
 		assertEquals(34.6786737, holder.get("json", "double-array").asList().get(0).asDouble(), 0.0);
 	}
 
+	@Test
+	public void testHas() throws Exception {
+		JSONHolder holder = JSONHolder.parse(testRawJson);
+		assertEquals(true, holder.has("json"));
+		assertEquals(false, holder.has("jso"));
+	}
+
 	//--------------------------------------------------
 	//  test rawJson
 	//--------------------------------------------------
